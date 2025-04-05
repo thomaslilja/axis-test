@@ -35,3 +35,11 @@ Run it locally:
 ```bash
 npm run dev
 ```
+
+## Example query
+
+```bash
+curl 'https://s05dopwpw0.execute-api.eu-north-1.amazonaws.com/graphql' \
+  -H 'x-api-key: <api-key>' \
+  --data-raw '{"query":"query GetItems {\n  getItems {\n    id\n    mandatoryString\n    optionalBoolean\n  }\n}","operationName":"GetItems"}'
+```
