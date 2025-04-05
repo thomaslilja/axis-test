@@ -6,7 +6,9 @@ import ky from 'ky';
 const app = new Hono();
 
 app.post('/graphql', async (c) => {
-  const apiKey = c.req.header('x-api-key'); // API key will be passed in the header from the authorizer. If authorized it will always be available here.
+  // API key will be passed in the header from the authorizer.
+  // If authorized it will always be available here.
+  const apiKey = c.req.header('x-api-key');
 
   const apiUrl = process.env.GRAPHQL_API_URL;
   if (!apiUrl) {
