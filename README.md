@@ -10,7 +10,7 @@ GraphQL API proxy.
 
 https://s05dopwpw0.execute-api.eu-north-1.amazonaws.com/graphql
 
-## :construction: Getting started
+## :construction_worker: Getting started
 
 Clone the repository:
 
