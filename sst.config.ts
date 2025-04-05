@@ -10,7 +10,6 @@ export default $config({
       providers: {
         aws: {
           region: 'eu-north-1',
-          profile: process.env.GITHUB_ACTIONS ? undefined : 'tl-sandbox',
         },
       },
     };

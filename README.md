@@ -12,25 +12,23 @@ https://s05dopwpw0.execute-api.eu-north-1.amazonaws.com/graphql
 
 ## :construction_worker: Getting started
 
-Clone the repository:
+### Clone the repository:
 
 ```bash
 git clone git@github.com:thomaslilja/axis-test.git
 ```
 
-Install dependencies:
+### Install dependencies:
 
 ```bash
 npm i
 ```
 
-Configure AWS:
+### Configure AWS:
 
-```bash
-aws sso login --profile <your-profile>
-```
+Use your preferred way to authenticate against AWS, or try the amazing [(AW)Sesh](https://github.com/elva-labs/awsesh).
 
-Run it locally:
+### Run it locally:
 
 ```bash
 npm run dev
