@@ -38,5 +38,4 @@ jobs:
           role-to-assume: arn:aws:iam::975050239014:role/axis-test-github-role
           aws-region: eu-north-1
       - name: Deploy
-        run: |
-          npm run deploy
+        run: npm run deploy

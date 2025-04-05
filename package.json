@@ -2,7 +2,7 @@
   "name": "axis-test",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "sst deploy --stage prod",
+    "deploy": "sst deploy --stage prod --print-logs",
     "dev": "sst dev",
     "diff": "sst diff"
   },
