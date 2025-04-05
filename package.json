@@ -1,0 +1,23 @@
+{
+  "name": "axis-test",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "sst deploy --stage prod",
+    "dev": "sst dev",
+    "diff": "sst diff"
+  },
+  "dependencies": {
+    "hono": "^4.7.5",
+    "ky": "^1.8.0",
+    "sst": "^3.12.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.1",
+    "@types/aws-lambda": "8.10.148",
+    "@types/node": "^22.13.13",
+    "esbuild": "^0.25.2",
+    "prettier": "^3.5.3",
+    "typescript": "5.8.2"
+  },
+  "private": true
+}

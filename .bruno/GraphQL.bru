@@ -1,0 +1,21 @@
+meta {
+  name: GraphQL
+  type: graphql
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/graphql
+  body: graphql
+  auth: inherit
+}
+
+body:graphql {
+  query GetItems {
+    getItems {
+      id
+      mandatoryString
+      optionalBoolean
+    }
+  }
+}
