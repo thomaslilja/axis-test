@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'sst.config.ts'
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
 
 permissions:
   id-token: write
@@ -34,4 +39,4 @@ jobs:
           aws-region: eu-north-1
       - name: Deploy
         run: |
-          npm run deploy -- --verbose
+          npm run deploy
