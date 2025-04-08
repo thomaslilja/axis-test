@@ -32,7 +32,7 @@ app.post('/graphql', async (c) => {
 
 // Not found
 app.notFound((c) => {
-  return c.json({ error: 'Not found' }, 404);
+  throw new HTTPException(404, { message: 'Not found' });
 });
 
 // Error handler
