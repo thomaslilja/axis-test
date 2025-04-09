@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { env } from 'hono/adapter';
 import { handle } from 'hono/aws-lambda';
 import { HTTPException } from 'hono/http-exception';
 import ky from 'ky';
@@ -10,15 +11,16 @@ app.post('/graphql', async (c) => {
   // If authorized it will always be available here.
   const apiKey = c.req.header('x-api-key');
 
-  const apiUrl = process.env.GRAPHQL_API_URL;
-  if (!apiUrl) {
+  const { GRAPHQL_API_URL } = env<{ GRAPHQL_API_URL: string }>(c);
+
+  if (!GRAPHQL_API_URL) {
     throw new HTTPException(500, { message: 'API URL not configured' });
   }
 
   const body = await c.req.json();
 
   const data = await ky
-    .post<Record<string, any>>(apiUrl, {
+    .post<Record<string, any>>(GRAPHQL_API_URL, {
       json: body,
       headers: {
         'x-api-key': apiKey,
